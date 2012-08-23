@@ -10,7 +10,7 @@ from django.core.urlresolvers import reverse
 from crispy_forms.layout import Layout, Fieldset, Div
 from crispy_forms.bootstrap import AppendedText
 
-from sveeaccounts.forms import AppendedLink, UserProfileBaseLayout, UserProfileBaseForm
+from sveeaccounts.forms import UserProfileBaseLayout, UserProfileBaseForm
 
 from accounts.models import UserProfile
 
