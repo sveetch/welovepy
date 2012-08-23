@@ -11,3 +11,7 @@ dist/*
 #defaults
 *.pyc
 *.pyo
+
+#django specific
+_statics/*
+prod_settings.py

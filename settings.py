@@ -88,7 +88,6 @@ ACCOUNT_ACTIVATION_DAYS = 3
 # Default layout to use with "crispy_forms"
 CRISPY_TEMPLATE_PACK = 'bootstrap'
 
-
 #####
 #
 #   Automatic path finding
