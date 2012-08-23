@@ -1,0 +1,133 @@
+{% load i18n autobreadcrumb %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% spaceless %}
+    <meta charset="utf-8">
+    <title>{% block head_title %}{{ SITE.name }}{% endblock %}</title>
+    {% comment %}<meta name="viewport" content="width=device-width, initial-scale=1.0">{% endcomment %}
+    <meta name="description" content="Blah blah">
+    <meta name="author" content="Moi">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="{{ STATIC_URL }}favicon.ico">
+    
+    <link type="text/css" href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="{{ STATIC_URL }}bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link type="text/css" href="{{ STATIC_URL }}theme/css/screen.min.css" rel="stylesheet">
+    {% comment %}<link rel="stylesheet/less" href="{{ STATIC_URL }}theme/css/screen.less">{% endcomment %}
+    {% block head_more_links %}{% endblock %}
+
+    {% block head_base_js %}
+    <script src="{{ STATIC_URL }}jquery/jquery-1.7.1.min.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
+    {% comment %}<script src="{{ STATIC_URL }}less-1.3.0.min.js"></script>{% endcomment %}
+    <script src="{{ STATIC_URL }}jquery/plugins/equalizeCols.js"></script>
+    <script language="JavaScript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function() {
+        $("footer div.foot-part").equalizeCols();
+    });
+    //]]>
+    </script>
+    {% endblock %}{% block head_more_js %}
+{% endblock %}{% endspaceless %}</head>
+
+<body{% block body_attr %}{% endblock %}>
+
+    <div id="header">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </a>
+                    
+                    <a class="brand" href="{{ SITE.web_url }}" title="{{ SITE.name }}"><span class="ico we">WE</span> <span class="ico heart">LOVE</span> <span class="ico python">PY</span></a>
+                    
+                    {% comment %}<div class="nav-collapse">
+                        <ul class="nav">
+                            <li><a data-toggle="modal" href="#devnotes" >Notes sur le projet</a></li>
+                        </ul>
+                    </div>{% endcomment %}
+                    
+                    <ul class="nav pull-right">
+                        <li class="divider-vertical"></li>
+                        {% if user.is_authenticated %}<li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <i class="icon-user icon-white"></i> <strong>{{ user.get_full_name }}</strong> <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url accounts-my %}" class="cap">{% trans 'your account' %}</a></li>
+                                {% if user.is_staff %}<li><a href="{% url admin:index %}" class="cap">{% trans 'admin' %}</a></li>
+                                <li><a href="{% url batcave-index %}" class="cap">{% trans 'batcave' %}</a></li>{% endif %}
+                                <li class="divider"></li>
+                                <li><a href="{% url auth_logout %}" class="cap">{% trans 'disconnect' %}</a></li>
+                            </ul>
+                        </li>{% else %}
+                        <li><a href="{% url auth_login %}"><i class="icon-user icon-white"></i> {% trans 'login' %}</a></li>
+                        {% endif %}
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="body_content">
+        <div class="container">
+            {% block breadcrumbsroot %}{% block breadcrumbs %}{% autobreadcrumbs_tag %}{% endblock %}{% endblock %}
+            
+            {% block body_content %}
+                {% block content %}{% endblock %}
+                <div class="cale"></div>
+            {% endblock %}
+        </div>
+    </div>
+    
+    {% comment %}<div class="modal hide" id="devnotes">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h3>Notes</h3>
+        </div>
+        <div class="modal-body">
+            {% document_insert "devnotes" %}
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn" data-dismiss="modal">Close</a>
+        </div>
+    </div>{% endcomment %}
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="foot-part span4 well">
+                    {% comment %}<p><a class="btn" data-toggle="modal" href="#devnotes" >Lire les notes sur le projet</a></p>{% endcomment %}
+                    <p>Layout réalisé avec <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> et le thème <a href="http://bootswatch.com/spruce/">Spruce</a>.</p>
+                    <p class="credits">{{ SITE.name }} © 2011-{% now "Y" %} {% blocktrans %}All rights reserved{% endblocktrans %}</p>
+                </div>
+                <div id="nous-contacter" class="foot-part span4 well">
+                    <h2>Nous contacter</h2>
+                    
+                    <h3>Par Email</h3>
+                    <p>À l'adresse <a href="mailto:contact@welovepy.com"><code>contact@welovepy.com</code></a></p>
+                    
+                    <h3>Par client IRC</h3>
+                    <p>Canal : <code>#welovepy</code></p>
+                    <p>Serveur : <code>irc.freenode.net</code></p>
+                    
+                </div>
+                <div class="foot-part span4 well">
+                    <h3>Adhérer</h3>
+                    <ul>
+                        <li>Principe de cooptation : pour devenir membre, vous devez être présenté par qqun étant déjà membre</li>
+                        <li>Etre une entité morale (société, indépendant, auto entrepreneur)</li>
+                        <li>Fournir un descriptif : (logo, description, compétences, tel, email web) + interlocuteur correspondant avec l'alliance</li>
+                        <li>Avoir le quorum du board pour rentrer dans l'alliance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

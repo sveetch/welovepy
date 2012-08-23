@@ -1,0 +1,619 @@
+[
+    {
+        "pk": 1, 
+        "model": "sites.site", 
+        "fields": {
+            "domain": "192.168.0.101:8001", 
+            "name": "We Love Py [dev]"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "sites.site", 
+        "fields": {
+            "domain": "82.127.0.160:8895", 
+            "name": "We Love Py"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "alliance.structure", 
+        "fields": {
+            "name": "Always Data", 
+            "logo": "accounts/userprofiles/logos/initial/alwaysdata.jpg", 
+            "logo_width": 200, 
+            "logo_height": 90, 
+            "website": "https://www.alwaysdata.com/"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "alliance.structure", 
+        "fields": {
+            "logo_width": 200, 
+            "name": "Anybox", 
+            "logo_height": 90, 
+            "logo": "accounts/userprofiles/logos/initial/anybox.jpg", 
+            "website": "http://www.anybox.fr/"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "alliance.structure", 
+        "fields": {
+            "logo_width": 195, 
+            "name": "Emencia", 
+            "logo_height": 90, 
+            "logo": "accounts/userprofiles/logos/initial/emencia.jpg", 
+            "website": "http://www.emencia.fr/fr"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "alliance.structure", 
+        "fields": {
+            "logo_width": 200, 
+            "name": "Itaapy", 
+            "logo_height": 90, 
+            "logo": "accounts/userprofiles/logos/initial/itaapy.jpg", 
+            "website": "http://www.itaapy.com/"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "alliance.structure", 
+        "fields": {
+            "logo_width": 200, 
+            "name": "Majerti", 
+            "logo_height": 90, 
+            "logo": "accounts/userprofiles/logos/initial/majerti.jpg", 
+            "website": "http://www.majerti.fr/"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "alliance.structure", 
+        "fields": {
+            "logo_width": 200, 
+            "name": "Scourge", 
+            "logo_height": 90, 
+            "logo": "accounts/userprofiles/logos/initial/scourge.jpg", 
+            "website": "http://scourge.biz/"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "alliance.structure", 
+        "fields": {
+            "logo_width": 200, 
+            "name": "Sveetch.biz", 
+            "logo_height": 90, 
+            "logo": "accounts/userprofiles/logos/initial/sveetch.jpg", 
+            "website": "http://www.sveetch.biz/"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "alliance.structure", 
+        "fields": {
+            "logo_width": 200, 
+            "name": "Valentin Bourgoin", 
+            "logo_height": 90, 
+            "logo": "accounts/userprofiles/logos/initial/valentinbourgoin.jpg", 
+            "website": "http://www.valentinbourgoin.net/"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "alliance.structure", 
+        "fields": {
+            "logo_width": 200, 
+            "name": "XCG Consulting", 
+            "logo_height": 90, 
+            "logo": "accounts/userprofiles/logos/initial/xcg.jpg", 
+            "website": "http://www.xcg-consulting.fr/"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "root", 
+            "first_name": "Sarah", 
+            "last_name": "Connor", 
+            "is_active": true, 
+            "is_superuser": true, 
+            "is_staff": true, 
+            "last_login": "2012-08-08 03:06:11", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$b12c8$3efcf09e48e7313a2ff42e8efe358f93f204a709", 
+            "email": "sveetch@gmail.com", 
+            "date_joined": "2012-08-08 03:05:28"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "accounts.userprofile", 
+        "fields": {
+            "town": "Le Blanc Mesnil", 
+            "phone_number": "01 49 39 09 99", 
+            "initiator": null, 
+            "zipcode": "93150", 
+            "user": 1, 
+            "mobile_number": "", 
+            "adress": "6 rue Auber", 
+            "skills": [], 
+            "tools": [], 
+            "structure": null 
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "alwaysdata", 
+            "first_name": "alwaysdata", 
+            "last_name": "dupont", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2012-08-08 04:27:07", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$2d068$8b110d7e4f2a7abab17d62877aae44cd7842cbca", 
+            "email": "alwaysdata@sveetch.biz", 
+            "date_joined": "2012-08-08 04:27:07"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "accounts.userprofile", 
+        "fields": {
+            "town": "placeholder", 
+            "phone_number": "placeholder", 
+            "initiator": null, 
+            "zipcode": "empty", 
+            "user": 2, 
+            "mobile_number": null, 
+            "adress": "placeholder", 
+            "skills": [], 
+            "tools": [], 
+            "structure": 1 
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "anybox", 
+            "first_name": "anybox", 
+            "last_name": "dupont", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2012-08-08 04:27:07", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$0d481$8b8382fb66d78a1f4e04403c13a2ec75de331583", 
+            "email": "anybox@sveetch.biz", 
+            "date_joined": "2012-08-08 04:27:07"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "accounts.userprofile", 
+        "fields": {
+            "town": "placeholder", 
+            "phone_number": "placeholder", 
+            "initiator": null, 
+            "zipcode": "empty", 
+            "user": 3, 
+            "mobile_number": null, 
+            "adress": "placeholder", 
+            "skills": [], 
+            "tools": [], 
+            "structure": 2 
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "emencia", 
+            "first_name": "emencia", 
+            "last_name": "dupont", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2012-08-08 04:27:07", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$5cabd$d01e0772ba197baad0737dc3d59efe6b4ccd879d", 
+            "email": "emencia@sveetch.biz", 
+            "date_joined": "2012-08-08 04:27:07"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "accounts.userprofile", 
+        "fields": {
+            "town": "placeholder", 
+            "phone_number": "placeholder", 
+            "initiator": null, 
+            "zipcode": "empty", 
+            "user": 4, 
+            "mobile_number": null, 
+            "adress": "placeholder", 
+            "skills": [], 
+            "tools": [], 
+            "structure": 3 
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "itaapy", 
+            "first_name": "itaapy", 
+            "last_name": "dupont", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2012-08-08 04:27:07", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$0350a$c60e8c3397365e47db32421a62f059530c2b6882", 
+            "email": "itaapy@sveetch.biz", 
+            "date_joined": "2012-08-08 04:27:07"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "accounts.userprofile", 
+        "fields": {
+            "town": "placeholder", 
+            "phone_number": "placeholder", 
+            "initiator": null, 
+            "zipcode": "empty", 
+            "user": 5, 
+            "mobile_number": null, 
+            "adress": "placeholder", 
+            "skills": [], 
+            "tools": [], 
+            "structure": 4 
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "majerti", 
+            "first_name": "majerti", 
+            "last_name": "dupont", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2012-08-08 04:27:07", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$c8de6$ec86211858909fe6c43d5c429064077cff0c3c23", 
+            "email": "majerti@sveetch.biz", 
+            "date_joined": "2012-08-08 04:27:07"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "accounts.userprofile", 
+        "fields": {
+            "town": "placeholder", 
+            "phone_number": "placeholder", 
+            "initiator": null, 
+            "zipcode": "empty", 
+            "user": 6, 
+            "mobile_number": null, 
+            "adress": "placeholder", 
+            "skills": [], 
+            "tools": [], 
+            "structure": 5 
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "scourge", 
+            "first_name": "scourge", 
+            "last_name": "dupont", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2012-08-08 04:27:07", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$8d997$037caf9ee36afcb09720881ce1d8cad35973daa7", 
+            "email": "scourge@sveetch.biz", 
+            "date_joined": "2012-08-08 04:27:07"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "accounts.userprofile", 
+        "fields": {
+            "town": "placeholder", 
+            "phone_number": "placeholder", 
+            "initiator": null, 
+            "zipcode": "empty", 
+            "user": 7, 
+            "mobile_number": null, 
+            "adress": "placeholder", 
+            "skills": [], 
+            "tools": [], 
+            "structure": 6 
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "sveetch", 
+            "first_name": "David", 
+            "last_name": "Thenon", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2012-08-08 04:27:07", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$da18f$3ee753d65ad818e732910ffee5ceb3a34c42e0fd", 
+            "email": "sveetch@sveetch.biz", 
+            "date_joined": "2012-08-08 04:27:07"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "accounts.userprofile", 
+        "fields": {
+            "town": "placeholder", 
+            "phone_number": "placeholder", 
+            "initiator": null, 
+            "zipcode": "empty", 
+            "user": 8, 
+            "mobile_number": null, 
+            "adress": "placeholder", 
+            "skills": [], 
+            "tools": [], 
+            "structure": 7 
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "valentinbourgoin", 
+            "first_name": "valentinbourgoin", 
+            "last_name": "dupont", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2012-08-08 04:27:07", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$de23c$4afd2e640a1f1abc037b392d9581cab5fb2deaca", 
+            "email": "valentinbourgoin@sveetch.biz", 
+            "date_joined": "2012-08-08 04:27:07"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "accounts.userprofile", 
+        "fields": {
+            "town": "placeholder", 
+            "phone_number": "placeholder", 
+            "initiator": null, 
+            "zipcode": "empty", 
+            "user": 9, 
+            "mobile_number": null, 
+            "adress": "placeholder", 
+            "skills": [], 
+            "tools": [], 
+            "structure": 8 
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "xcg", 
+            "first_name": "xcg", 
+            "last_name": "dupont", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2012-08-08 04:27:07", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$d7ec7$5dc88fca0e680306d89abf5422339f0c9b1f1ee5", 
+            "email": "xcg@sveetch.biz", 
+            "date_joined": "2012-08-08 04:27:07"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "accounts.userprofile", 
+        "fields": {
+            "town": "placeholder", 
+            "phone_number": "placeholder", 
+            "initiator": null, 
+            "zipcode": "empty", 
+            "user": 10, 
+            "mobile_number": null, 
+            "adress": "placeholder", 
+            "skills": [], 
+            "tools": [], 
+            "structure": 9 
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "alliance.skill", 
+        "fields": {
+            "visible": true, 
+            "title": "Maintenance", 
+            "description": "Et par enim officiis Hoc aut amicitiam excidat plus sententia terram ne videtur observare est nec sit restricte aequo terram.", 
+            "created": "2012-08-08 03:42:19"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "alliance.skill", 
+        "fields": {
+            "visible": true, 
+            "title": "D\u00e9veloppement sur mesure", 
+            "description": "Quod opera consulta cogitabatur astute, ne eum ut praepotens acueret in fiduciam exitiosa coeptantem.", 
+            "created": "2012-08-08 03:42:19"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "alliance.skill", 
+        "fields": {
+            "visible": true, 
+            "title": "Migration de base de donn\u00e9es", 
+            "description": "Quisque leo elit; ut hoc insidiarum genere Galli periret avunculus, consectetur ut aliquet nec, scelerisque sed massa. Maecenasut hoc insidiarum genere Galli periret avunculus,  lacinia eleifend eros ac tincidunt. Duis convallis rutrum nulla nec rutrum. Pellentesque posuere.", 
+            "created": "2012-08-08 03:42:20"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "alliance.skill", 
+        "fields": {
+            "visible": true, 
+            "title": "Am\u00e9liorations de modules", 
+            "description": "Donec pellentesque nunc et dolor facilisis cursus. Nam nec neque arcu. Morbi faucibus magna in mauris faucibus a sollicitudin ante fringilla? Sed egestas, turpis ut cras amet.", 
+            "created": "2012-08-08 03:42:20"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "alliance.skill", 
+        "fields": {
+            "visible": true, 
+            "title": "Corrections de bugs", 
+            "description": "Etiam eget turpis ac orci luctus placerat sed non neque. Aliquam porta tristique libero; vel aliquet nulla consectetur non. Aenean erat velit, dapibus eu vestibulum eget amet.", 
+            "created": "2012-08-08 03:42:20"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "alliance.tool", 
+        "fields": {
+            "picture": "alliance/tools/pictures/initial/django.png", 
+            "description": "The Web framework for perfectionists with deadlines", 
+            "picture_height": 120, 
+            "title": "Django", 
+            "url": "http://docs.djangoproject.com/en/dev/", 
+            "created": "2012-08-08 03:56:46", 
+            "picture_width": 260, 
+            "visible": true
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "alliance.tool", 
+        "fields": {
+            "picture": "alliance/tools/pictures/initial/zwook.png", 
+            "description": "Solution de gestion de contenu sous Zope", 
+            "picture_height": 120, 
+            "title": "Zwook", 
+            "url": "http://www.zwook.org/", 
+            "created": "2012-08-08 03:56:46", 
+            "picture_width": 260, 
+            "visible": true
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "alliance.tool", 
+        "fields": {
+            "picture": "alliance/tools/pictures/initial/sphinx.png", 
+            "description": "Python Documentation Generator", 
+            "picture_height": 120, 
+            "title": "Sphinx", 
+            "url": "http://docs.djangoproject.com/en/dev/", 
+            "created": "2012-08-08 03:56:46", 
+            "picture_width": 260, 
+            "visible": true
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "alliance.tool", 
+        "fields": {
+            "picture": "alliance/tools/pictures/initial/pygments.png", 
+            "description": "Python Syntax highlighter", 
+            "picture_height": 120, 
+            "title": "Pygments", 
+            "url": "http://docs.djangoproject.com/en/dev/", 
+            "created": "2012-08-08 03:56:46", 
+            "picture_width": 260, 
+            "visible": true
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "alliance.tool", 
+        "fields": {
+            "picture": "", 
+            "description": "A Minimalist Python Web Framework", 
+            "picture_height": 0, 
+            "title": "CherryPy", 
+            "url": "http://www.cherrypy.org/", 
+            "created": "2012-08-08 03:56:46", 
+            "picture_width": 0, 
+            "visible": true
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "alliance.tool", 
+        "fields": {
+            "picture": "", 
+            "description": "pip is a tool for installing and managing Python packages, such as those found in the Python Package Index.", 
+            "picture_height": 0, 
+            "title": "pip", 
+            "url": "http://www.pip-installer.org/", 
+            "created": "2012-08-08 03:56:46", 
+            "picture_width": 0, 
+            "visible": true
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "alliance.tool", 
+        "fields": {
+            "picture": "", 
+            "description": "virtualenv is a tool to create isolated Python environments", 
+            "picture_height": 0, 
+            "title": "virtualenv", 
+            "url": "http://www.virtualenv.org/", 
+            "created": "2012-08-08 03:56:46", 
+            "picture_width": 0, 
+            "visible": true
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "alliance.tool", 
+        "fields": {
+            "picture": "", 
+            "description": "Working with Excel Files in Python", 
+            "picture_height": 0, 
+            "title": "Python Excel", 
+            "url": "http://www.python-excel.org/", 
+            "created": "2012-08-08 03:56:46", 
+            "picture_width": 0, 
+            "visible": true
+        }
+    }
+]

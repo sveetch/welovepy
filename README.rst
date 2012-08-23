@@ -1,56 +1,36 @@
-.. _autobreadcrumbs: http://pypi.python.org/pypi/autobreadcrumbs
 .. _Django: https://www.djangoproject.com/
+.. _autobreadcrumbs: http://pypi.python.org/pypi/autobreadcrumbs
 .. _django-braces: https://github.com/sveetch/django-braces
 .. _django-crispy-forms: https://github.com/maraujop/django-crispy-forms
-.. _django-simple-captcha: https://github.com/mbi/django-simple-captcha
-.. _django-registration: http://pypi.python.org/pypi/django-registration
+.. _Sveetchies-accounts: https://github.com/sveetch/sveeaccounts
+.. _Sveetchies-documents: http://pypi.python.org/pypi/sveedocuments
 
 Introduction
 ============
 
-**Sveetchies-account** is a `Django`_ application to embed all the registration stuff using 
-`django-registration`_ and `django-simple-captcha`_.
+This is a Django webapplication to promote the "WE LOVE PYTHON" alliance and manage client demands.
 
-This is not really intended to be a generic app, so use it at your own risk.
+The Alliance has member (registred user with a profile), each member link to their structure and to the tools and skills they use.
 
-Actually this is just an implementation of an inherited `django-registration`_ backend with 
-`django-simple-captcha`_ usage and with a `UserProfileBase` abstract model (and his 
-form, and his form view) that can be used as a base for user profiles.
-
-A ``REGISTRATION_BLOCKED`` optionnal variable can be added in settings, if at ``True`` 
-the new registration form is blocked, default is ``False``.
-
-Links
-*****
-
-* Download his `PyPi package <http://pypi.python.org/pypi/sveeaccounts>`_;
-* Clone it on his `Github repository <https://github.com/sveetch/sveeaccounts>`_;
-* Documentation and demo to come on his 
-  `DjangoSveetchies page <http://sveetchies.sveetch.net/sveeaccounts/>`_.
+The Homepage display structures, tools and skills that have at less one member.
 
 Requires
 ========
 
+* Python >= 2.6;
+* `Django`_ 1.3;
 * `autobreadcrumbs`_;
+* `django-crispy-forms`_;
 * My `django-braces`_ fork;
-* `django-registration`_ >= 0.8;
-* `django-simple-captcha`_ >= 0.3.4;
-* `django-crispy-forms`_ >= 1.1.x;
+* `Sveetchies-accounts`_;
 
-Install
-=======
+PostgreSQL is recommanded (other SGBD have not been tested).
 
-Settings
-********
+Optionnally for development you will need to install :
 
-In your *settings* file add the app to your installed apps :
+* Less for his command line tool ``lessc`` (to compile Bootstrap and the webapp layout theme);
+* Django debug toolbar (you will have to enable it in the settings);
 
-::
-
-    INSTALLED_APPS = (
-        ...
-        'sveeaccounts',
-        ...
-    )
-
-Then you have to mount its urls map in your webapp urls.
+.. NOTE:: The webapp embed some settings for `Sveetchies-documents`_ but actually this 
+          is not used so you won't need to install it. This should be deprecated or 
+          enable in the future.
