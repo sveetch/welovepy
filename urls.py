@@ -11,10 +11,10 @@ admin.autodiscover()
 import autobreadcrumbs
 autobreadcrumbs.autodiscover()
 
-from views import HomepageView, BatcaveIndex
+from views import HomepageView
 
 from accounts.views import MyAccountView
-from alliance.views import MyStructureCreateView, MyToolCreateView, DemandCreateView
+from alliance.views import StructureSuggestView, ToolSuggestView, DemandCreateView, BatcaveIndex, BatcaveStructureList
 
 #from sveedocuments.views.page import HelpPageView, PageIndexView, PageDetailsView, PageSourceView
 
@@ -26,13 +26,14 @@ urlpatterns = patterns('',
     (r'^accounts/', include('sveeaccounts.urls')),
     
     url(r'^batcave/$', BatcaveIndex.as_view(), name='batcave-index'),
+    url(r'^batcave/structures/$', BatcaveStructureList.as_view(), name='batcave-structure-list'),
     #(r'^batcave/documents/', include('sveedocuments.urls_board')),
     
     url(r'^demand/$', DemandCreateView.as_view(), name='demand-public-add'),
     
     url(r'^my/$', MyAccountView.as_view(), name='accounts-my'),
-    url(r'^my/add/structure/$', MyStructureCreateView.as_view(success_list_url="accounts-my"), name='accounts-my-structure-add'),
-    url(r'^my/suggest/tool/$', MyToolCreateView.as_view(success_list_url="accounts-my"), name='accounts-my-tool-add'),
+    url(r'^my/suggest/structure/$', StructureSuggestView.as_view(success_list_url="accounts-my"), name='accounts-structure-suggest'),
+    url(r'^my/suggest/tool/$', ToolSuggestView.as_view(success_list_url="accounts-my"), name='accounts-tool-suggest'),
     
     #url(r'^documents-help/$', HelpPageView.as_view(), name='documents-help'),
     #url(r'^sitemap/$', PageIndexView.as_view(), name='documents-index'),

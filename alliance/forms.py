@@ -28,6 +28,20 @@ class StructureForm(forms.ModelForm):
         model = Structure
         exclude = ('logo_width', 'logo_height')
 
+class StructureSuggestForm(StructureForm):
+    """
+    Suggestion d'une nouvelle structure
+    """
+    def save(self, *args, **kwargs):
+        instance = super(StructureSuggestForm, self).save(commit=False, *args, **kwargs)
+        instance.suggest_from = self.author
+        instance.save()
+        return instance
+    
+    class Meta:
+        model = Structure
+        exclude = ('logo_width', 'logo_height', 'enabled', 'suggest_from')
+
 class ToolForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         self.author = kwargs.pop('user')
@@ -46,19 +60,17 @@ class ToolForm(forms.ModelForm):
 
 class ToolSuggestForm(ToolForm):
     """
-    Suggestion d'un outil, la suggestion est enregistrée en mode non visible
+    Suggestion d'un nouvel outil
     """
     def save(self, *args, **kwargs):
         instance = super(ToolSuggestForm, self).save(commit=False, *args, **kwargs)
         instance.suggest_from = self.author
-        instance.visible = False
         instance.save()
-        
         return instance
     
     class Meta:
         model = Tool
-        exclude = ('picture_width', 'picture_height', 'visible', 'suggest_from')
+        exclude = ('picture_width', 'picture_height', 'enabled', 'suggest_from')
 
 class DemandForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):

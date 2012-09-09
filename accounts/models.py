@@ -15,9 +15,9 @@ class UserProfile(UserProfileBase):
     User Profile
     """
     initiator = models.ForeignKey(User, verbose_name=_('initiator'), related_name='profile_initiator', blank=True, null=True)
-    structure = models.ForeignKey(Structure, verbose_name=_('structure'), blank=True, null=True)
+    structure = models.ForeignKey(Structure, verbose_name=_('structure'), limit_choices_to={'enabled':True}, blank=True, null=True)
     skills = models.ManyToManyField(Skill, verbose_name=_('skills'), blank=True)
-    tools = models.ManyToManyField(Tool, verbose_name=_('tools'), limit_choices_to={'visible':True}, blank=True)
+    tools = models.ManyToManyField(Tool, verbose_name=_('tools'), limit_choices_to={'enabled':True}, blank=True)
 
 
 from functools import partial

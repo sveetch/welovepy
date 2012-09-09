@@ -19,6 +19,7 @@
         "pk": 1, 
         "model": "alliance.structure", 
         "fields": {
+            "enabled": true, 
             "name": "Always Data", 
             "logo": "accounts/userprofiles/logos/initial/alwaysdata.jpg", 
             "logo_width": 200, 
@@ -30,6 +31,7 @@
         "pk": 2, 
         "model": "alliance.structure", 
         "fields": {
+            "enabled": true, 
             "logo_width": 200, 
             "name": "Anybox", 
             "logo_height": 90, 
@@ -41,6 +43,7 @@
         "pk": 3, 
         "model": "alliance.structure", 
         "fields": {
+            "enabled": true, 
             "logo_width": 195, 
             "name": "Emencia", 
             "logo_height": 90, 
@@ -52,6 +55,7 @@
         "pk": 4, 
         "model": "alliance.structure", 
         "fields": {
+            "enabled": true, 
             "logo_width": 200, 
             "name": "Itaapy", 
             "logo_height": 90, 
@@ -63,6 +67,7 @@
         "pk": 5, 
         "model": "alliance.structure", 
         "fields": {
+            "enabled": true, 
             "logo_width": 200, 
             "name": "Majerti", 
             "logo_height": 90, 
@@ -74,6 +79,7 @@
         "pk": 6, 
         "model": "alliance.structure", 
         "fields": {
+            "enabled": true, 
             "logo_width": 200, 
             "name": "Scourge", 
             "logo_height": 90, 
@@ -85,6 +91,7 @@
         "pk": 7, 
         "model": "alliance.structure", 
         "fields": {
+            "enabled": true, 
             "logo_width": 200, 
             "name": "Sveetch.biz", 
             "logo_height": 90, 
@@ -96,6 +103,7 @@
         "pk": 8, 
         "model": "alliance.structure", 
         "fields": {
+            "enabled": true, 
             "logo_width": 200, 
             "name": "Valentin Bourgoin", 
             "logo_height": 90, 
@@ -107,6 +115,7 @@
         "pk": 9, 
         "model": "alliance.structure", 
         "fields": {
+            "enabled": true, 
             "logo_width": 200, 
             "name": "XCG Consulting", 
             "logo_height": 90, 
@@ -458,7 +467,7 @@
         "pk": 1, 
         "model": "alliance.skill", 
         "fields": {
-            "visible": true, 
+            "enabled": true, 
             "title": "Maintenance", 
             "description": "Et par enim officiis Hoc aut amicitiam excidat plus sententia terram ne videtur observare est nec sit restricte aequo terram.", 
             "created": "2012-08-08 03:42:19"
@@ -468,7 +477,7 @@
         "pk": 2, 
         "model": "alliance.skill", 
         "fields": {
-            "visible": true, 
+            "enabled": true, 
             "title": "D\u00e9veloppement sur mesure", 
             "description": "Quod opera consulta cogitabatur astute, ne eum ut praepotens acueret in fiduciam exitiosa coeptantem.", 
             "created": "2012-08-08 03:42:19"
@@ -478,7 +487,7 @@
         "pk": 3, 
         "model": "alliance.skill", 
         "fields": {
-            "visible": true, 
+            "enabled": true, 
             "title": "Migration de base de donn\u00e9es", 
             "description": "Quisque leo elit; ut hoc insidiarum genere Galli periret avunculus, consectetur ut aliquet nec, scelerisque sed massa. Maecenasut hoc insidiarum genere Galli periret avunculus,  lacinia eleifend eros ac tincidunt. Duis convallis rutrum nulla nec rutrum. Pellentesque posuere.", 
             "created": "2012-08-08 03:42:20"
@@ -488,7 +497,7 @@
         "pk": 4, 
         "model": "alliance.skill", 
         "fields": {
-            "visible": true, 
+            "enabled": true, 
             "title": "Am\u00e9liorations de modules", 
             "description": "Donec pellentesque nunc et dolor facilisis cursus. Nam nec neque arcu. Morbi faucibus magna in mauris faucibus a sollicitudin ante fringilla? Sed egestas, turpis ut cras amet.", 
             "created": "2012-08-08 03:42:20"
@@ -498,7 +507,7 @@
         "pk": 5, 
         "model": "alliance.skill", 
         "fields": {
-            "visible": true, 
+            "enabled": true, 
             "title": "Corrections de bugs", 
             "description": "Etiam eget turpis ac orci luctus placerat sed non neque. Aliquam porta tristique libero; vel aliquet nulla consectetur non. Aenean erat velit, dapibus eu vestibulum eget amet.", 
             "created": "2012-08-08 03:42:20"
@@ -515,7 +524,7 @@
             "url": "http://docs.djangoproject.com/en/dev/", 
             "created": "2012-08-08 03:56:46", 
             "picture_width": 260, 
-            "visible": true
+            "enabled": true
         }
     }, 
     {
@@ -529,7 +538,7 @@
             "url": "http://www.zwook.org/", 
             "created": "2012-08-08 03:56:46", 
             "picture_width": 260, 
-            "visible": true
+            "enabled": true
         }
     }, 
     {
@@ -543,7 +552,7 @@
             "url": "http://docs.djangoproject.com/en/dev/", 
             "created": "2012-08-08 03:56:46", 
             "picture_width": 260, 
-            "visible": true
+            "enabled": true
         }
     }, 
     {
@@ -557,7 +566,7 @@
             "url": "http://docs.djangoproject.com/en/dev/", 
             "created": "2012-08-08 03:56:46", 
             "picture_width": 260, 
-            "visible": true
+            "enabled": true
         }
     }, 
     {
@@ -571,7 +580,7 @@
             "url": "http://www.cherrypy.org/", 
             "created": "2012-08-08 03:56:46", 
             "picture_width": 0, 
-            "visible": true
+            "enabled": true
         }
     }, 
     {
@@ -585,7 +594,7 @@
             "url": "http://www.pip-installer.org/", 
             "created": "2012-08-08 03:56:46", 
             "picture_width": 0, 
-            "visible": true
+            "enabled": true
         }
     }, 
     {
@@ -599,7 +608,7 @@
             "url": "http://www.virtualenv.org/", 
             "created": "2012-08-08 03:56:46", 
             "picture_width": 0, 
-            "visible": true
+            "enabled": true
         }
     }, 
     {
@@ -613,7 +622,7 @@
             "url": "http://www.python-excel.org/", 
             "created": "2012-08-08 03:56:46", 
             "picture_width": 0, 
-            "visible": true
+            "enabled": true
         }
     }
 ]

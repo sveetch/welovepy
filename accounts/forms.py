@@ -47,9 +47,9 @@ def UserProfileLayout():
         UserProfileBaseLayout(),
         Fieldset(
             ugettext('profile'),
-            AppendedLink('structure', reverse("accounts-my-structure-add"), ugettext('add new'), icon="icon-plus"),
+            AppendedLink('structure', reverse("accounts-structure-suggest"), ugettext('add new'), icon="icon-plus"),
             'skills',
-            AppendedLink('tools', reverse("accounts-my-tool-add"), ugettext('suggest a new tool'), icon="icon-plus-sign"),
+            AppendedLink('tools', reverse("accounts-tool-suggest"), ugettext('suggest a new tool'), icon="icon-plus-sign"),
         ),
     )
     

@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <div id="homepage">
+        <header>
+            <h1>Batcave</h1>
+        </header>
+        
+        <section class="summaries">
+            <ul class="nav nav-tabs" id="summariesTab">
+                <li class="active"><a data-toggle="tab" href="#global">Résumé</a></li>
+                <li><a data-toggle="tab" href="#pending-demands">Consultations en attentes</a></li>
+                <li><a data-toggle="tab" href="#pending-structures">Structures en attentes</a></li>
+                <li><a data-toggle="tab" href="#pending-tools">Outils en attentes</a></li>
+            </ul>
+            <div class="tab-content" id="summariesTabContent">
+                <div id="global" class="tab-pane fade active in">
+                    <ul>
+                        <li>{{ member_count }} membres au total</li>
+                        <li>{{ pending_demands.count }} consultations en attente</li>
+                        <li>{{ pending_structures.count }} structures en attente</li>
+                        <li>{{ pending_tools.count }} outils en attente</li>
+                    </ul>
+                </div>
+                
+                <div id="pending-demands" class="tab-pane fade">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>created</th>
+                                <th>contact_name</th>
+                                <th>deadline</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            {% for item in pending_demands %}
+                            <tr>
+                                <td>{{ item.id }}</td>
+                                <td>{{ item.created }}</td>
+                                <td>{{ item.contact_name }}</td>
+                                <td>{{ item.deadline }}</td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="4">Aucune demande en attente</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <a class="btn btn-large btn-block btn-primary" href="">Voir toute les demandes de consultations</a>
+                </div>
+                
+                <div id="pending-structures" class="tab-pane fade">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>created</th>
+                                <th>name</th>
+                                <th>suggest_from</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            {% for item in pending_structures %}
+                            <tr>
+                                <td>{{ item.id }}</td>
+                                <td>{{ item.created }}</td>
+                                <td>{{ item.name }}</td>
+                                <td>{{ item.suggest_from }}</td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="4">Aucune suggestion en attente</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <a class="btn btn-large btn-block btn-primary" href="{% url batcave-structure-list %}">Voir toute les structures</a>
+                </div>
+                
+                <div id="pending-tools" class="tab-pane fade">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>created</th>
+                                <th>title</th>
+                                <th>suggest_from</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            {% for item in pending_tools %}
+                            <tr>
+                                <td>{{ item.id }}</td>
+                                <td>{{ item.created }}</td>
+                                <td>{{ item.title }}</td>
+                                <td>{{ item.suggest_from }}</td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="4">Aucune suggestion en attente</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <a class="btn btn-large btn-block btn-primary" href="">Voir toute les outils</a>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

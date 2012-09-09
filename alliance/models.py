@@ -19,11 +19,14 @@ class Structure(models.Model):
     u"""
     Structure model
     """
+    created = models.DateTimeField(_('created'), auto_now_add=True)
     name = models.CharField(_('structure name'), unique=True, max_length=100, blank=False)
     website = models.CharField(_('website url'), blank=True, null=True, max_length=255)
     logo = models.ImageField(_('logo'), upload_to=STRUCTURE_LOGO_UPLOADTO, width_field="logo_width", height_field="logo_height", max_length=255, blank=True, null=True)
     logo_width = models.IntegerField(default=0)
     logo_height = models.IntegerField(default=0)
+    enabled = models.BooleanField(_('enabled'), default=False)
+    suggest_from = models.ForeignKey(User, verbose_name=_('suggested by'), blank=True, null=True)
     
     def __unicode__(self):
         return self.name
@@ -39,7 +42,7 @@ class Skill(models.Model):
     created = models.DateTimeField(_('created'), auto_now_add=True)
     title = models.CharField(_('title'), unique=True, blank=False, max_length=255)
     description = models.TextField(_('description'), blank=False)
-    visible = models.BooleanField(_('visibility'), default=True)
+    enabled = models.BooleanField(_('enabled'), default=False)
 
     def __unicode__(self):
         return self.title
@@ -59,7 +62,7 @@ class Tool(models.Model):
     picture_width = models.IntegerField(default=0)
     picture_height = models.IntegerField(default=0)
     description = models.TextField(_('description'), blank=False)
-    visible = models.BooleanField(_('visibility'), default=True)
+    enabled = models.BooleanField(_('enabled'), default=False)
     suggest_from = models.ForeignKey(User, verbose_name=_('suggested by'), blank=True, null=True)
 
     def __unicode__(self):
@@ -78,7 +81,7 @@ class Demand(models.Model):
     contact_name = models.CharField(_('contact name'), blank=False, max_length=75)
     contact_email = models.CharField(_('contact email'), blank=False, max_length=255)
     deadline = models.DateTimeField(_('your deadline'))
-    required_tools = models.ManyToManyField(Tool, verbose_name=_('required tools'), blank=True, limit_choices_to={'visible': True})
+    required_tools = models.ManyToManyField(Tool, verbose_name=_('required tools'), blank=True, limit_choices_to={'enabled': True})
     description = models.TextField(_('project description'), blank=False)
 
     def __unicode__(self):
