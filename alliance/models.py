@@ -34,7 +34,7 @@ class Structure(models.Model):
 
 class Skill(models.Model):
     """
-    Skill
+    Member skills
     """
     created = models.DateTimeField(_('created'), auto_now_add=True)
     title = models.CharField(_('title'), unique=True, blank=False, max_length=255)
@@ -48,10 +48,9 @@ class Skill(models.Model):
         verbose_name = _("skill")
         verbose_name_plural = _("skills")
 
-
 class Tool(models.Model):
     """
-    Tool
+    Member tools
     """
     created = models.DateTimeField(_('created'), auto_now_add=True)
     title = models.CharField(_('title'), unique=True, blank=False, max_length=255)
@@ -69,3 +68,22 @@ class Tool(models.Model):
     class Meta:
         verbose_name = _("tool")
         verbose_name_plural = _("tools")
+
+class Demand(models.Model):
+    """
+    Customer demand
+    """
+    created = models.DateTimeField(_('created'), auto_now_add=True)
+    customer_care = models.ForeignKey(User, verbose_name=_('customer care'), blank=True, null=True)
+    contact_name = models.CharField(_('contact name'), blank=False, max_length=75)
+    contact_email = models.CharField(_('contact email'), blank=False, max_length=255)
+    deadline = models.DateTimeField(_('your deadline'))
+    required_tools = models.ManyToManyField(Tool, verbose_name=_('required tools'), blank=True, limit_choices_to={'visible': True})
+    description = models.TextField(_('project description'), blank=False)
+
+    def __unicode__(self):
+        return self.created
+    
+    class Meta:
+        verbose_name = _("demand")
+        verbose_name_plural = _("demands")

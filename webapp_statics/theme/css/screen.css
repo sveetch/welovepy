@@ -9,6 +9,7 @@
 .clearfix:after {
   display: table;
   content: "";
+  line-height: 0;
 }
 .clearfix:after {
   clear: both;
@@ -23,10 +24,9 @@
 .input-block-level {
   display: block;
   width: 100%;
-  min-height: 28px;
+  min-height: 30px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 body {
@@ -49,7 +49,9 @@ body {
 .brand .heart {
   width: 32px;
   height: 32px;
-  background-position: 0 -4px;
+  position: relative;
+  top: -2px;
+  background-position: 0 -5px;
   background-image: url('../img/heart.png');
   background-repeat: no-repeat;
   text-indent: -10000px;

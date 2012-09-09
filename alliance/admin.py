@@ -8,3 +8,4 @@ from models import *
 admin.site.register(Structure)
 admin.site.register(Skill)
 admin.site.register(Tool)
+admin.site.register(Demand)

@@ -14,7 +14,7 @@ autobreadcrumbs.autodiscover()
 from views import HomepageView, BatcaveIndex
 
 from accounts.views import MyAccountView
-from alliance.views import MyStructureCreateView, MyToolCreateView
+from alliance.views import MyStructureCreateView, MyToolCreateView, DemandCreateView
 
 #from sveedocuments.views.page import HelpPageView, PageIndexView, PageDetailsView, PageSourceView
 
@@ -27,6 +27,8 @@ urlpatterns = patterns('',
     
     url(r'^batcave/$', BatcaveIndex.as_view(), name='batcave-index'),
     #(r'^batcave/documents/', include('sveedocuments.urls_board')),
+    
+    url(r'^demand/$', DemandCreateView.as_view(), name='demand-public-add'),
     
     url(r'^my/$', MyAccountView.as_view(), name='accounts-my'),
     url(r'^my/add/structure/$', MyStructureCreateView.as_view(success_list_url="accounts-my"), name='accounts-my-structure-add'),

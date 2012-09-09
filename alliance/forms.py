@@ -10,7 +10,7 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Fieldset, Div, Submit
 from crispy_forms.bootstrap import AppendedText
 
-from alliance.models import Structure, Tool
+from alliance.models import Structure, Tool, Demand
 
 class StructureForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -59,3 +59,17 @@ class ToolSuggestForm(ToolForm):
     class Meta:
         model = Tool
         exclude = ('picture_width', 'picture_height', 'visible', 'suggest_from')
+
+class DemandForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        self.helper = FormHelper()
+        self.helper.form_action = '.'
+        self.helper.form_class = 'form-horizontal well'
+        self.helper.form_style = 'inline'
+        self.helper.add_input(Submit('submit', ugettext('Continue')))
+        
+        super(DemandForm, self).__init__(*args, **kwargs)
+    
+    class Meta:
+        model = Demand
+        exclude = ('customer_care',)
